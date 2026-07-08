@@ -10,33 +10,45 @@
     theme: {
       extend: {
         colors: {
-          navy: {
-            950: '#0b1a2b',
-            900: '#0f2440',
-            800: '#163455',
+          slate: {
+            950: '#0b1220',
           },
           copper: {
-            400: '#e08a4f',
-            500: '#c96f34',
-            600: '#a85a29',
+            50: '#fdf4ee',
+            100: '#fbe6d7',
+            200: '#f5c9ab',
+            300: '#eda877',
+            400: '#e08749',
+            500: '#c96a2e',
+            600: '#a95324',
+            700: '#87401e',
+            800: '#6c341d',
+            900: '#582c1b',
           }
+        },
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         }
       }
     }
   }
 </script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+</style>
 </head>
-<body class="bg-slate-50 text-navy-900 scroll-smooth">
+<body class="bg-white text-slate-800">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-navy-950/95 backdrop-blur text-slate-100 shadow-lg">
+<!-- Header / Nav -->
+<header class="sticky top-0 z-50 bg-slate-950 text-white shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
-      <a href="#home" class="flex items-center gap-2 font-bold text-lg md:text-xl tracking-tight">
-        <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-copper-500 text-navy-950 text-lg">🔧</span>
-        Clarke Kent Plumbing
+      <a href="#home" class="flex items-center gap-2">
+        <span class="text-copper-400 text-2xl">🔧</span>
+        <span class="font-bold text-lg md:text-xl tracking-tight">Clarke Kent Plumbing</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="#home" class="hover:text-copper-400 transition">Home</a>
         <a href="#services" class="hover:text-copper-400 transition">Services</a>
         <a href="#why-us" class="hover:text-copper-400 transition">Why Us</a>
@@ -44,32 +56,40 @@
         <a href="#gallery" class="hover:text-copper-400 transition">Gallery</a>
         <a href="#contact" class="hover:text-copper-400 transition">Contact</a>
       </nav>
-      <a href="tel:(512) 477-2200" class="inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-600 text-white font-semibold text-sm px-4 py-2.5 rounded-full transition shadow-md">
-        <span>📞</span> Call Now
+      <a href="tel:(512) 477-2200" class="hidden sm:inline-flex items-center gap-2 bg-copper-500 hover:bg-copper-400 text-white font-semibold px-4 py-2 rounded-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
+        (512) 477-2200
+      </a>
+      <a href="tel:(512) 477-2200" class="sm:hidden inline-flex items-center bg-copper-500 text-white p-2 rounded-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+        </svg>
       </a>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section id="home" class="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-slate-100 overflow-hidden">
-  <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%)]"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
-    <div class="max-w-2xl">
-      <p class="inline-block bg-copper-500/20 text-copper-400 font-semibold text-sm px-4 py-1.5 rounded-full mb-5 border border-copper-500/30">
-        Serving Austin & Surrounding Areas Since Day One
-      </p>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-        Austin's Trusted <span class="text-copper-400">Plumbers</span> for Repairs Done Right
+<!-- Hero -->
+<section id="home" class="relative bg-slate-950 text-white overflow-hidden">
+  <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-copper-500 via-slate-950 to-slate-950"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+    <div class="max-w-3xl">
+      <span class="inline-block bg-copper-500/20 text-copper-300 text-xs font-semibold tracking-wide uppercase px-3 py-1 rounded-full mb-5">
+        Locally Owned &middot; Serving Austin, TX
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+        Austin's Trusted Plumbers, <span class="text-copper-400">On Call Day &amp; Night</span>
       </h1>
-      <p class="text-lg md:text-xl text-slate-300 mb-8">
-        From burst pipes to bathroom remodels, Clarke Kent Plumbing brings honest pricing, licensed expertise, and same-day service to homes and businesses across Austin, TX.
+      <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl">
+        From leaky faucets to full repipes, Clarke Kent Plumbing delivers dependable, upfront plumbing service to homes and businesses across Austin and the surrounding area.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="tel:(512) 477-2200" class="inline-flex items-center justify-center gap-2 bg-copper-500 hover:bg-copper-600 text-white font-bold text-lg px-8 py-4 rounded-full transition shadow-lg shadow-copper-900/40">
-          📞 Call (512) 477-2200
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="tel:(512) 477-2200" class="inline-flex items-center justify-center gap-2 bg-copper-500 hover:bg-copper-400 text-white font-semibold px-6 py-3.5 rounded-lg text-lg transition">
+          Call Now: (512) 477-2200
         </a>
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-slate-100/30 hover:border-copper-400 hover:text-copper-400 font-bold text-lg px-8 py-4 rounded-full transition">
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 border border-slate-600 hover:border-copper-400 hover:text-copper-400 text-white font-semibold px-6 py-3.5 rounded-lg text-lg transition">
           Request a Quote
         </a>
       </div>
@@ -77,167 +97,174 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-20 bg-slate-50">
+<!-- Services -->
+<section id="services" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-2xl mx-auto mb-14">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-navy-950 mb-4">Our Plumbing Services</h2>
-      <p class="text-slate-600 text-lg">Full-service residential and commercial plumbing for Austin homeowners, landlords, and businesses.</p>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-slate-100">
-        <div class="w-14 h-14 rounded-xl bg-copper-500/10 flex items-center justify-center text-3xl mb-5">🚿</div>
-        <h3 class="text-xl font-bold text-navy-950 mb-2">Leak Detection & Repair</h3>
-        <p class="text-slate-600">Hidden slab leaks and dripping fixtures waste water and money. We locate and fix leaks fast using proven diagnostic methods, minimizing damage to your property.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-slate-100">
-        <div class="w-14 h-14 rounded-xl bg-copper-500/10 flex items-center justify-center text-3xl mb-5">🚽</div>
-        <h3 class="text-xl font-bold text-navy-950 mb-2">Drain & Sewer Cleaning</h3>
-        <p class="text-slate-600">Slow or clogged drains? Our hydro-jetting and camera inspection equipment clears blockages and identifies root intrusion or pipe damage before it becomes a bigger problem.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-slate-100">
-        <div class="w-14 h-14 rounded-xl bg-copper-500/10 flex items-center justify-center text-3xl mb-5">🔥</div>
-        <h3 class="text-xl font-bold text-navy-950 mb-2">Water Heater Installation & Repair</h3>
-        <p class="text-slate-600">Tank and tankless water heater service, including replacement, repair, and flushing to extend the life of your system and keep the hot water running.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-slate-100">
-        <div class="w-14 h-14 rounded-xl bg-copper-500/10 flex items-center justify-center text-3xl mb-5">🚰</div>
-        <h3 class="text-xl font-bold text-navy-950 mb-2">Fixture & Faucet Installation</h3>
-        <p class="text-slate-600">Upgrade sinks, faucets, toilets, and garbage disposals with clean, precise installation that protects your finishes and prevents future leaks.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-slate-100">
-        <div class="w-14 h-14 rounded-xl bg-copper-500/10 flex items-center justify-center text-3xl mb-5">🏗️</div>
-        <h3 class="text-xl font-bold text-navy-950 mb-2">Repipe & Remodel Plumbing</h3>
-        <p class="text-slate-600">Planning a kitchen or bathroom remodel, or dealing with aging galvanized pipes? We handle full and partial repipes with minimal disruption to your home.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-slate-100">
-        <div class="w-14 h-14 rounded-xl bg-copper-500/10 flex items-center justify-center text-3xl mb-5">🚨</div>
-        <h3 class="text-xl font-bold text-navy-950 mb-2">Emergency Plumbing</h3>
-        <p class="text-slate-600">Burst pipe or backed-up sewer line? Our team responds quickly to emergency calls across the Austin area to stop damage before it spreads.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section id="why-us" class="py-20 bg-navy-950 text-slate-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-14">
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Why Austin Chooses Clarke Kent Plumbing</h2>
-      <p class="text-slate-300 text-lg">We treat every home like our own, with a focus on honesty, speed, and quality craftsmanship.</p>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <div class="bg-navy-900 rounded-2xl p-7 border border-navy-800">
-        <div class="text-3xl mb-4">🛡️</div>
-        <h3 class="font-bold text-lg mb-2 text-copper-400">Licensed & Insured</h3>
-        <p class="text-slate-300 text-sm">Fully licensed Texas plumbers with insurance coverage, so every job is done to code and you're always protected.</p>
-      </div>
-
-      <div class="bg-navy-900 rounded-2xl p-7 border border-navy-800">
-        <div class="text-3xl mb-4">⏱️</div>
-        <h3 class="font-bold text-lg mb-2 text-copper-400">Fast, Reliable Response</h3>
-        <p class="text-slate-300 text-sm">We know plumbing problems don't wait for business hours. Expect prompt scheduling and technicians who show up on time.</p>
-      </div>
-
-      <div class="bg-navy-900 rounded-2xl p-7 border border-navy-800">
-        <div class="text-3xl mb-4">💲</div>
-        <h3 class="font-bold text-lg mb-2 text-copper-400">Upfront, Honest Pricing</h3>
-        <p class="text-slate-300 text-sm">You'll know the cost before we start. No hidden fees, no surprise charges — just clear estimates and fair rates.</p>
-      </div>
-
-      <div class="bg-navy-900 rounded-2xl p-7 border border-navy-800">
-        <div class="text-3xl mb-4">🏠</div>
-        <h3 class="font-bold text-lg mb-2 text-copper-400">Local & Family-Owned</h3>
-        <p class="text-slate-300 text-sm">Proudly based in Austin, we're invested in this community and committed to building long-term relationships, not one-off jobs.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="py-20 bg-slate-50">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-extrabold text-navy-950 mb-4">Trusted by Our Neighbors</h2>
-    <p class="text-slate-600 text-lg mb-10">Real feedback from real customers across the Austin area, verified through Google.</p>
-
-    <div class="inline-flex flex-col items-center bg-white border border-slate-200 rounded-2xl shadow-md px-10 py-8">
-      <div class="flex items-center gap-2 mb-2">
-        <svg width="28" height="28" viewBox="0 0 24 24" class="fill-current"><path d="M21.35 11.1H12v2.9h5.35c-.23 1.5-1.65 4.4-5.35 4.4-3.22 0-5.85-2.66-5.85-5.9s2.63-5.9 5.85-5.9c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.75 3.9 14.6 3 12 3 6.98 3 3 6.98 3 12s3.98 9 9 9c5.19 0 8.65-3.65 8.65-8.8 0-.6-.07-1.05-.15-1.5z" fill="#4285F4"/></svg>
-        <span class="text-4xl font-extrabold text-navy-950">4.5</span>
-        <span class="text-2xl">★★★★★</span>
-      </div>
-      <p class="text-slate-600 font-medium">Average rating from <span class="font-bold text-navy-950">596 Google reviews</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-14">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-navy-950 mb-4">Our Work in Austin</h2>
-      <p class="text-slate-600 text-lg">A look at recent installations, repairs, and finished projects around the city.</p>
+      <h2 class="text-sm font-semibold text-copper-600 uppercase tracking-wide">What We Do</h2>
+      <p class="mt-2 text-3xl md:text-4xl font-bold text-slate-950">Full-Service Plumbing for Austin Homes &amp; Businesses</p>
+      <p class="mt-4 text-slate-600">Whatever the issue, our licensed technicians show up prepared, on time, and ready to get it fixed right the first time.</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <img src="https://picsum.photos/seed/clarkekentplumbing1/600/400" alt="Plumbing project 1" class="rounded-xl shadow-md w-full h-64 object-cover">
-      <img src="https://picsum.photos/seed/clarkekentplumbing2/600/400" alt="Plumbing project 2" class="rounded-xl shadow-md w-full h-64 object-cover">
-      <img src="https://picsum.photos/seed/clarkekentplumbing3/600/400" alt="Plumbing project 3" class="rounded-xl shadow-md w-full h-64 object-cover">
-      <img src="https://picsum.photos/seed/clarkekentplumbing4/600/400" alt="Plumbing project 4" class="rounded-xl shadow-md w-full h-64 object-cover">
-      <img src="https://picsum.photos/seed/clarkekentplumbing5/600/400" alt="Plumbing project 5" class="rounded-xl shadow-md w-full h-64 object-cover">
-      <img src="https://picsum.photos/seed/clarkekentplumbing6/600/400" alt="Plumbing project 6" class="rounded-xl shadow-md w-full h-64 object-cover">
+
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+        <div class="h-12 w-12 rounded-xl bg-copper-100 text-copper-600 flex items-center justify-center text-2xl mb-4">🚿</div>
+        <h3 class="text-lg font-bold text-slate-950 mb-2">Leak Detection &amp; Repair</h3>
+        <p class="text-slate-600 text-sm">Fast, non-invasive leak detection to stop water damage before it starts &mdash; from slab leaks to hidden pipe failures.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+        <div class="h-12 w-12 rounded-xl bg-copper-100 text-copper-600 flex items-center justify-center text-2xl mb-4">🔥</div>
+        <h3 class="text-lg font-bold text-slate-950 mb-2">Water Heater Service</h3>
+        <p class="text-slate-600 text-sm">Repair, replacement, and installation of tank and tankless water heaters, sized right for your household.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+        <div class="h-12 w-12 rounded-xl bg-copper-100 text-copper-600 flex items-center justify-center text-2xl mb-4">🚽</div>
+        <h3 class="text-lg font-bold text-slate-950 mb-2">Drain &amp; Sewer Cleaning</h3>
+        <p class="text-slate-600 text-sm">Hydro-jetting and cabling to clear stubborn clogs and keep drains and sewer lines flowing freely.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+        <div class="h-12 w-12 rounded-xl bg-copper-100 text-copper-600 flex items-center justify-center text-2xl mb-4">🛠️</div>
+        <h3 class="text-lg font-bold text-slate-950 mb-2">Fixture Installation</h3>
+        <p class="text-slate-600 text-sm">Faucets, sinks, toilets, and garbage disposals installed cleanly and correctly, with quality parts.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+        <div class="h-12 w-12 rounded-xl bg-copper-100 text-copper-600 flex items-center justify-center text-2xl mb-4">🏗️</div>
+        <h3 class="text-lg font-bold text-slate-950 mb-2">Repiping &amp; Repairs</h3>
+        <p class="text-slate-600 text-sm">Full and partial repipes for aging homes, plus targeted repairs on galvanized and copper lines.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+        <div class="h-12 w-12 rounded-xl bg-copper-100 text-copper-600 flex items-center justify-center text-2xl mb-4">🚨</div>
+        <h3 class="text-lg font-bold text-slate-950 mb-2">Emergency Plumbing</h3>
+        <p class="text-slate-600 text-sm">Burst pipe or major backup? We offer emergency response to get your water and drains back under control fast.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 bg-slate-100">
+<!-- Why Choose Us -->
+<section id="why-us" class="py-20 bg-slate-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="text-sm font-semibold text-copper-600 uppercase tracking-wide">Why Choose Us</h2>
+      <p class="mt-2 text-3xl md:text-4xl font-bold text-slate-950">Straightforward Plumbing, No Surprises</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 text-center">
+        <div class="text-3xl mb-3">📋</div>
+        <h3 class="font-bold text-slate-950 mb-2">Licensed &amp; Insured</h3>
+        <p class="text-sm text-slate-600">Fully licensed Texas plumbers, insured for your peace of mind on every job.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 text-center">
+        <div class="text-3xl mb-3">⚡</div>
+        <h3 class="font-bold text-slate-950 mb-2">Fast Response</h3>
+        <p class="text-sm text-slate-600">Prompt scheduling and quick arrival windows across the greater Austin area.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 text-center">
+        <div class="text-3xl mb-3">💵</div>
+        <h3 class="font-bold text-slate-950 mb-2">Upfront Pricing</h3>
+        <p class="text-sm text-slate-600">Clear, written estimates before any work begins &mdash; no hidden fees, ever.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 text-center">
+        <div class="text-3xl mb-3">🏠</div>
+        <h3 class="font-bold text-slate-950 mb-2">Local &amp; Family-Owned</h3>
+        <p class="text-sm text-slate-600">Proudly based in Austin, serving neighbors with honest, dependable work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-sm font-semibold text-copper-600 uppercase tracking-wide">Trusted by Austin</h2>
+    <p class="mt-2 text-3xl md:text-4xl font-bold text-slate-950 mb-10">What the Numbers Say</p>
+
+    <div class="inline-flex flex-col items-center gap-3 bg-slate-50 border border-slate-200 rounded-2xl px-10 py-8 shadow-sm">
+      <div class="flex items-center gap-2">
+        <span class="text-4xl font-extrabold text-slate-950">4.5</span>
+        <div class="flex text-copper-500 text-2xl">
+          ★★★★★
+        </div>
+      </div>
+      <p class="text-slate-600 font-medium">Average rating from <span class="font-bold text-slate-950">596 Google reviews</span></p>
+      <div class="flex items-center gap-2 mt-1 text-sm text-slate-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 48 48">
+          <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+          <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+          <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/>
+          <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+        </svg>
+        <span>Google Reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="text-sm font-semibold text-copper-600 uppercase tracking-wide">Our Work</h2>
+      <p class="mt-2 text-3xl md:text-4xl font-bold text-slate-950">A Look at Recent Jobs</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <img src="https://picsum.photos/seed/clarkekentplumbing1/600/400" alt="Plumbing job in Austin" class="rounded-xl w-full h-56 object-cover shadow-sm">
+      <img src="https://picsum.photos/seed/clarkekentplumbing2/600/400" alt="Plumbing job in Austin" class="rounded-xl w-full h-56 object-cover shadow-sm">
+      <img src="https://picsum.photos/seed/clarkekentplumbing3/600/400" alt="Plumbing job in Austin" class="rounded-xl w-full h-56 object-cover shadow-sm">
+      <img src="https://picsum.photos/seed/clarkekentplumbing4/600/400" alt="Plumbing job in Austin" class="rounded-xl w-full h-56 object-cover shadow-sm">
+      <img src="https://picsum.photos/seed/clarkekentplumbing5/600/400" alt="Plumbing job in Austin" class="rounded-xl w-full h-56 object-cover shadow-sm">
+      <img src="https://picsum.photos/seed/clarkekentplumbing6/600/400" alt="Plumbing job in Austin" class="rounded-xl w-full h-56 object-cover shadow-sm">
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
       <div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-navy-950 mb-4">Get In Touch</h2>
-        <p class="text-slate-600 text-lg mb-8">Have a plumbing issue or a project in mind? Reach out and our Austin-based team will get back to you promptly.</p>
+        <h2 class="text-sm font-semibold text-copper-600 uppercase tracking-wide">Get In Touch</h2>
+        <p class="mt-2 text-3xl md:text-4xl font-bold text-slate-950 mb-6">Talk to a Real Austin Plumber</p>
+        <p class="text-slate-600 mb-8">Whether it's a routine repair or a plumbing emergency, our team is ready to help. Reach out by phone or send us a message below.</p>
 
         <div class="space-y-5">
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-copper-500/10 flex items-center justify-center text-2xl">📞</div>
+            <div class="h-11 w-11 rounded-full bg-copper-100 text-copper-600 flex items-center justify-center text-xl">📞</div>
             <div>
-              <p class="text-sm text-slate-500">Call us anytime</p>
-              <a href="tel:(512) 477-2200" class="text-lg font-bold text-navy-950 hover:text-copper-500 transition">(512) 477-2200</a>
+              <p class="text-sm text-slate-500">Call Us</p>
+              <a href="tel:(512) 477-2200" class="font-semibold text-slate-950 hover:text-copper-600">(512) 477-2200</a>
             </div>
           </div>
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full bg-copper-500/10 flex items-center justify-center text-2xl">📍</div>
+            <div class="h-11 w-11 rounded-full bg-copper-100 text-copper-600 flex items-center justify-center text-xl">📍</div>
             <div>
-              <p class="text-sm text-slate-500">Proudly serving</p>
-              <p class="text-lg font-bold text-navy-950">Austin, TX & surrounding areas</p>
+              <p class="text-sm text-slate-500">Service Area</p>
+              <p class="font-semibold text-slate-950">Austin, TX &amp; surrounding communities</p>
             </div>
           </div>
         </div>
       </div>
 
-      <form class="bg-white rounded-2xl shadow-md p-8 space-y-5 border border-slate-200">
+      <form class="bg-slate-50 border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-5">
         <div>
-          <label for="name" class="block text-sm font-semibold text-navy-950 mb-1">Name</label>
+          <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Name</label>
           <input type="text" id="name" name="name" placeholder="Your full name" class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-copper-400">
         </div>
         <div>
-          <label for="email" class="block text-sm font-semibold text-navy-950 mb-1">Email</label>
+          <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email</label>
           <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-copper-400">
         </div>
         <div>
-          <label for="message" class="block text-sm font-semibold text-navy-950 mb-1">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Describe your plumbing issue..." class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-copper-400"></textarea>
+          <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your plumbing issue..." class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-copper-400"></textarea>
         </div>
-        <button type="submit" class="w-full bg-copper-500 hover:bg-copper-600 text-white font-bold py-3 rounded-lg transition shadow-md">
+        <button type="submit" class="w-full bg-copper-500 hover:bg-copper-400 text-white font-semibold py-3 rounded-lg transition">
           Send Message
         </button>
       </form>
@@ -245,27 +272,29 @@
   </div>
 </section>
 
-<!-- MAP -->
-<section class="w-full">
+<!-- Map -->
+<section class="bg-slate-100">
   <iframe
     src="https://www.google.com/maps?q=Clarke+Kent+Plumbing,+Austin,+TX&output=embed"
     width="100%"
-    height="450"
+    height="400"
     style="border:0;"
     allowfullscreen=""
     loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
+    referrerpolicy="no-referrer-when-downgrade"
+    class="w-full h-96 block">
   </iframe>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-navy-950 text-slate-300 py-10">
+<!-- Footer -->
+<footer class="bg-slate-950 text-slate-300 py-10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-    <div class="flex items-center gap-2 font-bold text-lg text-white">
-      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-copper-500 text-navy-950 text-base">🔧</span>
-      Clarke Kent Plumbing
+    <div class="flex items-center gap-2">
+      <span class="text-copper-400 text-xl">🔧</span>
+      <span class="font-bold text-white">Clarke Kent Plumbing</span>
     </div>
-    <p class="text-sm text-slate-400">Austin, TX &nbsp;|&nbsp; &copy; 2026 Clarke Kent Plumbing. All rights reserved.</p>
+    <p class="text-sm text-slate-400">Austin, TX</p>
+    <p class="text-sm text-slate-400">&copy; 2026 Clarke Kent Plumbing. All rights reserved.</p>
   </div>
 </footer>
 
